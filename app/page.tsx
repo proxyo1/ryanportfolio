@@ -1,7 +1,7 @@
 "use client"
 
 import Image from "next/image"
-import { Mail, Twitter, Linkedin, Github, ExternalLink, Moon, MapPin } from "lucide-react"
+import { Instagram, Twitter, Linkedin, Github, ExternalLink, Moon, MapPin } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import ExperienceCard from "@/components/ui/experience-card"
@@ -12,7 +12,7 @@ export default function Portfolio() {
   const [activeSection, setActiveSection] = useState<string | null>(null)
 
   const handleSectionClick = (section: string) => {
-    setActiveSection(activeSection === section ? null : section)
+    setActiveSection(section)
   }
 
   return (
@@ -39,25 +39,25 @@ export default function Portfolio() {
               </div>
 
               <div className="flex items-center gap-3">
-                <Button variant="ghost" size="icon" className="h-8 w-8 text-slate-400 hover:text-white cursor-pointer">
-                  <Mail className="h-4 w-4" />
+                <Button variant="ghost" size="icon" className="h-8 w-8 text-slate-500 hover:text-white hover:bg-slate-800 cursor-pointer">
+                  <Instagram className="h-4 w-4" />
                 </Button>
-                <Button variant="ghost" size="icon" className="h-8 w-8 text-slate-400 hover:text-white cursor-pointer">
+                <Button variant="ghost" size="icon" className="h-8 w-8 text-slate-500 hover:text-white hover:bg-slate-800 cursor-pointer">
                   <Twitter className="h-4 w-4" />
                 </Button>
-                <Button variant="ghost" size="icon" className="h-8 w-8 text-slate-400 hover:text-white cursor-pointer">
+                <Button variant="ghost" size="icon" className="h-8 w-8 text-slate-500 hover:text-white hover:bg-slate-800 cursor-pointer">
                   <Linkedin className="h-4 w-4" />
                 </Button>
-                <Button variant="ghost" size="icon" className="h-8 w-8 text-slate-400 hover:text-white cursor-pointer">
+                <Button variant="ghost" size="icon" className="h-8 w-8 text-slate-500 hover:text-white hover:bg-slate-800 cursor-pointer">
                   <Github className="h-4 w-4" />
                 </Button>
-                <Button variant="ghost" size="icon" className="h-8 w-8 text-slate-400 hover:text-white cursor-pointer">
+                <Button variant="ghost" size="icon" className="h-8 w-8 text-slate-500 hover:text-white hover:bg-slate-800 cursor-pointer">
                   <ExternalLink className="h-4 w-4" />
                 </Button>
               </div>
 
               <p className="text-sm text-slate-500">
-              Hosted on <span className="text-slate-400 underline">vercel.com</span>
+              Built on Next.js - Hosted on <span className="text-slate-400 underline">vercel.com</span>
               </p>
             </div>
 
