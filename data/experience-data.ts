@@ -27,15 +27,15 @@ export interface Experience {
   
   export const educationExperiences: Experience[] = [
     {
-      title: "Bachelor of Science in Computer Science",
-      organization: "University of Technology",
-      organizationWebsite: "https://university.edu",
+      title: "Diploma in Information Technology",
+      organization: "Temasek Polytechnic",
+      organizationWebsite: "https://tp.edu.sg",
       startDate: "Sep 2016",
       endDate: "Jun 2020",
       description:
         "Graduated with honors. Focused on software engineering, algorithms, and data structures. Completed capstone project on machine learning applications in web development.",
       skills: ["Java", "Python", "Data Structures", "Algorithms", "Machine Learning", "Database Design"],
-      imageUrl: "/placeholder.svg?height=48&width=48",
+      imageUrl: "/tp.jpg?height=48&width=48",
       type: "education",
     },
   ]
