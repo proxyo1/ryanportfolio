@@ -78,7 +78,7 @@ export default function ExperienceCard({
           <p className="text-sm text-slate-400 flex-shrink-0">{formatDateRange()}</p>
         </div>
       </CardHeader>
-      <CardContent className="space-y-3 -mt-5">
+      <CardContent className="space-y-3 -mt-7">
         <p className="text-sm text-slate-300 leading-relaxed">{description}</p>
         <div className="flex flex-wrap gap-1.5">
           {skills.map((skill, index) => (
