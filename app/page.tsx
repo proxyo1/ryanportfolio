@@ -1,9 +1,8 @@
 "use client"
 
 import Image from "next/image"
-import { Instagram, Twitter, Linkedin, Github, ExternalLink, Moon, MapPin } from "lucide-react"
+import { Instagram, Linkedin, Github, MapPin } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import { Card, CardContent } from "@/components/ui/card"
 import ExperienceCard from "@/components/ui/experience-card"
 import { allExperiences } from "@/data/experience-data"
 import { projects } from "@/data/projects-data"
@@ -25,7 +24,7 @@ export default function Portfolio() {
             <div className="space-y-4">
               <div className="flex items-center gap-3">
                 <h1 className="text-3xl font-bold">
-                  Hey! I'm <span className="bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent bg-[length:200%_100%] animate-[wave_3s_ease-in-out_infinite]">Ryan</span>
+                  Hey! I&apos;m <span className="bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent bg-[length:200%_100%] animate-[wave_3s_ease-in-out_infinite]">Ryan</span>
                 </h1>
                 <span className="inline-flex items-center rounded-md bg-blue-400/10 px-2 py-1 text-xs font-medium text-blue-400 ring-1 ring-inset ring-blue-400/30">
                   Available for Work
