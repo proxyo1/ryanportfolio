@@ -6,10 +6,11 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import ExperienceCard from "@/components/ui/experience-card"
 import { allExperiences } from "@/data/experience-data"
+import { projects } from "@/data/projects-data"
 import { useState } from "react"
 
 export default function Portfolio() {
-  const [activeSection, setActiveSection] = useState<string | null>(null)
+  const [activeSection, setActiveSection] = useState<string | null>('about')
 
   const handleSectionClick = (section: string) => {
     setActiveSection(section)
@@ -57,7 +58,7 @@ export default function Portfolio() {
               </div>
 
               <p className="text-sm text-slate-500">
-              Built on Next.js - Hosted on <span className="text-slate-400 underline">vercel.com</span>
+              Built on Next.js - Hosted on <span className="text-slate-400 underline"><a href="https://vercel.com">vercel.com</a></span>
               </p>
             </div>
 
@@ -167,27 +168,39 @@ export default function Portfolio() {
         {activeSection === 'about' && (
           <section className="w-full space-y-6">
             <h2 className="text-2xl font-bold text-center mb-8">About Me</h2>
-            <Card className="bg-slate-800 border-slate-700">
-              <CardContent className="p-6">
+
+
                 <p className="text-slate-300 leading-relaxed">
-                  I'm a passionate software engineer with a love for creating innovative solutions and beautiful user experiences. 
-                  With expertise in modern web technologies, I enjoy tackling complex problems and turning ideas into reality.
+                  Fresh Information Technology graduate @ Temasek Polytechnic with a passion for Software Engineering and Fintech.
+
+                  <br />
+                  <br />
+                  Currently building <a href="https://www.linkedin.com/feed/update/urn:li:activity:7337123878533550080/" className="text-blue-400 hover:text-blue-300">InternHunt</a>, a job aggregator for internships.
+
                 </p>
-              </CardContent>
-            </Card>
+
           </section>
         )}
 
         {activeSection === 'projects' && (
           <section className="w-full space-y-6">
             <h2 className="text-2xl font-bold text-center mb-8">Projects</h2>
-            <Card className="bg-slate-800 border-slate-700">
-              <CardContent className="p-6">
-                <p className="text-slate-300 leading-relaxed">
-                  Projects section coming soon! This will showcase my latest work and personal projects.
-                </p>
-              </CardContent>
-            </Card>
+            <div className="flex flex-col items-center space-y-6">
+              {projects.map((project, index) => (
+                <ExperienceCard
+                  key={index}
+                  title={project.title}
+                  organization={project.organization}
+                  organizationWebsite={project.organizationWebsite}
+                  startDate={project.startDate}
+                  endDate={project.endDate}
+                  description={project.description}
+                  skills={project.skills}
+                  imageUrl={project.imageUrl}
+                  type="work"
+                />
+              ))}
+            </div>
           </section>
         )}
       </div>

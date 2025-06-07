@@ -28,6 +28,9 @@ export default function ExperienceCard({
   type = "work",
 }: ExperienceCardProps) {
   const formatDateRange = () => {
+    if (!startDate) {
+      return ""
+    }
     if (endDate) {
       return `${startDate} - ${endDate}`
     }
