@@ -32,6 +32,16 @@ export const projects: Project[] = [
     type: "project",
   },
   {
+    title: "This Portfolio!",
+    organization: "Personal Project",
+    organizationWebsite: "https://github.com/proxyo1/ryanportfolio",
+    startDate: "",
+    description: "A minimalistic portfolio website built with Next.js and TypeScript. Features a clean design using shadcn/ui components and Tailwind CSS for styling.",
+    skills: ["Next.js", "TypeScript", "Tailwind CSS", "shadcn/ui", "React", "Framer Motion"],
+    imageUrl: "/me.jpg?height=48&width=48",
+    type: "project",
+  },
+  {
     title: "Cloud Migration Tool",
     organization: "Resorts World Sentosa",
     organizationWebsite: "https://rwsentosa.com",
