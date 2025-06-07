@@ -41,24 +41,24 @@ export default function Portfolio() {
 
               <div className="flex items-center gap-3">
                 <Button variant="ghost" size="icon" className="h-8 w-8 text-slate-500 hover:text-white hover:bg-slate-800 cursor-pointer">
-                  <Instagram className="h-4 w-4" />
+                  <a href="https://instagram.com/ryanlimxy" target="_blank" rel="noopener noreferrer">
+                    <Instagram className="h-4 w-4" />
+                  </a>
                 </Button>
                 <Button variant="ghost" size="icon" className="h-8 w-8 text-slate-500 hover:text-white hover:bg-slate-800 cursor-pointer">
-                  <Twitter className="h-4 w-4" />
+                  <a href="https://linkedin.com/in/ryanlimxy" target="_blank" rel="noopener noreferrer">
+                    <Linkedin className="h-4 w-4" />
+                  </a>
                 </Button>
                 <Button variant="ghost" size="icon" className="h-8 w-8 text-slate-500 hover:text-white hover:bg-slate-800 cursor-pointer">
-                  <Linkedin className="h-4 w-4" />
-                </Button>
-                <Button variant="ghost" size="icon" className="h-8 w-8 text-slate-500 hover:text-white hover:bg-slate-800 cursor-pointer">
-                  <Github className="h-4 w-4" />
-                </Button>
-                <Button variant="ghost" size="icon" className="h-8 w-8 text-slate-500 hover:text-white hover:bg-slate-800 cursor-pointer">
-                  <ExternalLink className="h-4 w-4" />
+                  <a href="https://github.com/proxyo1" target="_blank" rel="noopener noreferrer">
+                    <Github className="h-4 w-4" />
+                  </a>
                 </Button>
               </div>
 
               <p className="text-sm text-slate-500">
-              Built on Next.js - Hosted on <span className="text-slate-400 underline"><a href="https://vercel.com">vercel.com</a></span>
+              Built on Next.js - Hosted on <span className="text-slate-400 underline"><a href="https://vercel.com" target="_blank" rel="noopener noreferrer">vercel.com</a></span>
               </p>
             </div>
 
@@ -175,7 +175,7 @@ export default function Portfolio() {
 
                   <br />
                   <br />
-                  Currently building <a href="https://www.linkedin.com/feed/update/urn:li:activity:7337123878533550080/" className="text-blue-400 hover:text-blue-300">InternHunt</a>, a job aggregator for internships.
+                  Currently building <a href="https://www.linkedin.com/feed/update/urn:li:activity:7337123878533550080/" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300">InternHunt</a>, a job aggregator for internships.
 
                 </p>
 

@@ -18,9 +18,22 @@ export interface Experience {
       startDate: "Apr 2024",
       endDate: "Apr 2025",
       description:
-        "boi",
-      skills: ["React", "TypeScript", "Next.js", "Tailwind CSS", "GraphQL", "Jest"],
+        "I help to maintain existing Business Systems and develop new internal tools used by the company, while partaking in new projects to enhance the company's operations.",
+      skills: ["Python", "Project Management", "Business Analysis", "Software Development", "System Analysis", "Development Lifecycle"],
       imageUrl: "/rws.png?height=48&width=48",
+      type: "work",
+    },
+    
+    {
+      title: "Barista",
+      organization: "Starbucks",
+      organizationWebsite: "https://starbucks.com",
+      startDate: "Aug 2023",
+      endDate: "Sep 2024",
+      description:
+        "Coffee.",
+      skills: ["Customer Service", "Teamwork", "Communication"],
+      imageUrl: "/starbucks.png?height=48&width=48",
       type: "work",
     },
   ]
@@ -33,7 +46,7 @@ export interface Experience {
       startDate: "Apr 2022",
       endDate: "May 2025",
       description:
-        "Should've put in more effort in my assignments.. 😔",
+        "Should've put in more effort in my assignments.. 😔Track and Field 4x100 POLITE Champion tho",
       skills: ["Full Stack Development","DevOps", "Data Structures", "Algorithms", "Machine Learning", "Agile Methodologies", "Cloud Applications", "Internet of Things"],
       imageUrl: "/tp.jpg?height=48&width=48",
       type: "education",
