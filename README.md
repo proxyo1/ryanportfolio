@@ -4,7 +4,7 @@ Welcome to my portfolio! 🚀
 
 ## Overview
 
-This is my personal portfolio website built with modern web technologies to showcase my projects and experience. Feel free to use this as a template for your own portfolio - just clone the repository and customize it to make it your own!
+This is my personal portfolio website built with modern web technologies to showcase my projects and experience. Check out the live site at [ryanlim.xyz](https://ryanlim.xyz)! Feel free to use this as a template for your own portfolio - just clone the repository and customize it to make it your own!
 
 ## Tech Stack
 
