@@ -6,19 +6,36 @@ import { Button } from "@/components/ui/button"
 import ExperienceCard from "@/components/ui/experience-card"
 import { allExperiences } from "@/data/experience-data"
 import { projects } from "@/data/projects-data"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 
 export default function Portfolio() {
   const [activeSection, setActiveSection] = useState<string | null>('about')
+  const [isInitialLoad, setIsInitialLoad] = useState(true)
 
   const handleSectionClick = (section: string) => {
     setActiveSection(section)
+    setIsInitialLoad(false)
   }
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsInitialLoad(false)
+    }, 1500)
+
+    return () => clearTimeout(timer)
+  }, [])
 
   const fadeIn = {
     hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0 }
+    visible: { 
+      opacity: 1, 
+      y: 0,
+      transition: {
+        duration: 0.6,
+        ease: "easeOut"
+      }
+    }
   }
 
   const container = {
@@ -26,26 +43,27 @@ export default function Portfolio() {
     show: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.1
+        staggerChildren: 0.1,
+        delayChildren: 0.3
       }
     }
   }
 
   return (
-    <motion.div 
-      initial="hidden"
-      animate="visible"
-      variants={fadeIn}
-      className="min-h-screen bg-slate-900 text-white flex flex-col items-center py-16 font-[family-name:var(--font-space-grotesk)]"
-    >
-      <div className="w-full max-w-5xl mx-auto px-6 space-y-8">
+    <div className="min-h-screen bg-slate-900 text-white flex flex-col items-center py-16 font-[family-name:var(--font-space-grotesk)]">
+      <motion.div 
+        initial="hidden"
+        animate="visible"
+        variants={fadeIn}
+        className="w-full max-w-5xl mx-auto px-6 space-y-8"
+      >
         {/* Header */}
         <header className="w-full">
           <div className="flex items-center justify-between max-w-5xl mx-auto">
             <motion.div 
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.5 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
               className="space-y-4"
             >
               <div className="flex items-center gap-3">
@@ -55,7 +73,7 @@ export default function Portfolio() {
                 <motion.span 
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
-                  transition={{ delay: 0.2 }}
+                  transition={{ delay: 0.4, duration: 0.4 }}
                   className="inline-flex items-center rounded-md bg-blue-400/10 px-2 py-1 text-xs font-medium text-blue-400 ring-1 ring-inset ring-blue-400/30"
                 >
                   Available for Work
@@ -100,9 +118,11 @@ export default function Portfolio() {
             </motion.div>
 
             <motion.div 
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
               className="flex-shrink-0"
               whileHover={{ scale: 1.05 }}
-              transition={{ type: "spring", stiffness: 300 }}
             >
               <Image
                 src="/me.jpg?height=256&width=256"
@@ -120,7 +140,7 @@ export default function Portfolio() {
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.3 }}
+            transition={{ delay: 0.8, duration: 0.5 }}
             className="flex items-center justify-center gap-8 py-4 border-b border-slate-700"
           >
             {['about', 'experience', 'projects', 'education'].map((section) => (
@@ -151,6 +171,7 @@ export default function Portfolio() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
+              transition={{ duration: 0.3, delay: isInitialLoad ? 1.0 : 0 }}
               className="w-full space-y-6"
             >
               <h2 className="text-2xl font-bold text-center mb-8">Work Experience</h2>
@@ -188,6 +209,7 @@ export default function Portfolio() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
+              transition={{ duration: 0.3, delay: isInitialLoad ? 1.0 : 0 }}
               className="w-full space-y-6"
             >
               <h2 className="text-2xl font-bold text-center mb-8">Education</h2>
@@ -225,6 +247,7 @@ export default function Portfolio() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
+              transition={{ duration: 0.3, delay: isInitialLoad ? 1.0 : 0 }}
               className="w-full space-y-6"
             >
               <h2 className="text-2xl font-bold text-center mb-8">About Me</h2>
@@ -248,6 +271,7 @@ export default function Portfolio() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
+              transition={{ duration: 0.3, delay: isInitialLoad ? 1.0 : 0 }}
               className="w-full space-y-6"
             >
               <h2 className="text-2xl font-bold text-center mb-8">Projects</h2>
@@ -277,7 +301,7 @@ export default function Portfolio() {
             </motion.section>
           )}
         </AnimatePresence>
-      </div>
-    </motion.div>
+      </motion.div>
+    </div>
   )
 }
