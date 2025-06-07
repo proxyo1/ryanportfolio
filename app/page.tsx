@@ -79,7 +79,7 @@ export default function Portfolio() {
                   { href: "https://instagram.com/ryanlimxy", Icon: Instagram },
                   { href: "https://linkedin.com/in/ryanlimxy", Icon: Linkedin },
                   { href: "https://github.com/proxyo1", Icon: Github }
-                ].map((social, index) => (
+                ].map((social) => (
                   <motion.div
                     key={social.href}
                     whileHover={{ scale: 1.1 }}
