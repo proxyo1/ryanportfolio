@@ -18,7 +18,7 @@ export const projects: Project[] = [
     startDate: "",
     description: "Currently building a job aggregator for internships, helping students find relevant opportunities more efficiently.",
     skills: ["Next.js", "TypeScript", "Python", "Supabase", "Web Scraping"],
-    imageUrl: "/internhunt.png?height=48&width=48",
+    imageUrl: "/internhunt.ico?height=48&width=48",
     type: "project",
   },
   {
