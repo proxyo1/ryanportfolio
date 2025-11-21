@@ -14,7 +14,7 @@ export const projects: Project[] = [
   {
     title: "Founder/Software Engineer",
     organization: "InternHunt",
-    organizationWebsite: "https://www.linkedin.com/feed/update/urn:li:activity:7337123878533550080/",
+    organizationWebsite: "https://www.internhunt.sg/",
     startDate: "",
     description: "Currently building a job aggregator for internships, helping students find relevant opportunities more efficiently.",
     skills: ["Next.js", "TypeScript", "Python", "Supabase", "Web Scraping"],

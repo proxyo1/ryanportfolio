@@ -50,24 +50,24 @@ export default function Portfolio() {
   }
 
   return (
-    <div className="min-h-screen bg-slate-900 text-white flex flex-col items-center py-16 font-[family-name:var(--font-space-grotesk)]">
+    <div className="min-h-screen bg-slate-900 text-white flex flex-col items-center py-8 sm:py-12 md:py-16 font-[family-name:var(--font-space-grotesk)]">
       <motion.div 
         initial="hidden"
         animate="visible"
         variants={fadeIn}
-        className="w-full max-w-5xl mx-auto px-6 space-y-8"
+        className="w-full max-w-5xl mx-auto px-4 sm:px-6 space-y-6 sm:space-y-8"
       >
         {/* Header */}
         <header className="w-full">
-          <div className="flex items-center justify-between max-w-5xl mx-auto">
+          <div className="flex flex-col md:flex-row items-center md:items-start md:justify-between max-w-5xl mx-auto gap-6 md:gap-0">
             <motion.div 
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="space-y-4"
+              className="space-y-4 w-full md:w-auto text-center md:text-left"
             >
-              <div className="flex items-center gap-3">
-                <h1 className="text-3xl font-bold">
+              <div className="flex flex-col sm:flex-row items-center sm:items-center gap-3 justify-center md:justify-start">
+                <h1 className="text-2xl sm:text-3xl font-bold">
                   Hey! I&apos;m <span className="bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent bg-[length:200%_100%] animate-[wave_3s_ease-in-out_infinite]">Ryan</span>
                 </h1>
                 <motion.span 
@@ -82,7 +82,7 @@ export default function Portfolio() {
 
               <p className="text-sm text-slate-400">Aspiring Software Engineer</p>
 
-              <div className="flex items-center gap-2 text-slate-400">
+              <div className="flex items-center gap-2 text-slate-400 justify-center md:justify-start">
                 <MapPin className="h-4 w-4" />
                 <span>Singapore</span>
               </div>
@@ -91,7 +91,7 @@ export default function Portfolio() {
                 variants={container}
                 initial="hidden"
                 animate="show"
-                className="flex items-center gap-3"
+                className="flex items-center gap-3 justify-center md:justify-start"
               >
                 {[
                   { href: "https://instagram.com/ryanlimxy", Icon: Instagram },
@@ -112,7 +112,7 @@ export default function Portfolio() {
                 ))}
               </motion.div>
 
-              <p className="text-sm text-slate-500">
+              <p className="text-xs sm:text-sm text-slate-500 text-center md:text-left">
                 Built on Next.js - Hosted on <span className="text-slate-400 underline"><a href="https://vercel.com" target="_blank" rel="noopener noreferrer">vercel.com</a></span>
               </p>
             </motion.div>
@@ -129,7 +129,7 @@ export default function Portfolio() {
                 alt="Profile picture"
                 width={180}
                 height={180}
-                className="rounded-full"
+                className="rounded-full w-32 h-32 sm:w-40 sm:h-40 md:w-[180px] md:h-[180px]"
               />
             </motion.div>
           </div>
@@ -141,7 +141,7 @@ export default function Portfolio() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.8, duration: 0.5 }}
-            className="flex items-center justify-center gap-8 py-4 border-b border-slate-700"
+            className="flex items-center justify-center gap-2 sm:gap-4 md:gap-8 py-4 border-b border-slate-700 overflow-x-auto"
           >
             {['about', 'experience', 'projects', 'education'].map((section) => (
               <motion.div
@@ -151,7 +151,7 @@ export default function Portfolio() {
               >
                 <Button 
                   variant="ghost" 
-                  className={`text-slate-400 hover:text-white hover:bg-slate-800 cursor-pointer ${
+                  className={`text-xs sm:text-sm text-slate-400 hover:text-white hover:bg-slate-800 cursor-pointer whitespace-nowrap ${
                     activeSection === section ? 'text-white bg-slate-800' : ''
                   }`}
                   onClick={() => handleSectionClick(section)}
@@ -174,7 +174,7 @@ export default function Portfolio() {
               transition={{ duration: 0.3, delay: isInitialLoad ? 1.0 : 0 }}
               className="w-full space-y-6"
             >
-              <h2 className="text-2xl font-bold text-center mb-8">Work Experience</h2>
+              <h2 className="text-xl sm:text-2xl font-bold text-center mb-6 sm:mb-8">Work Experience</h2>
               <div className="flex flex-col items-center gap-6">
                 {allExperiences
                   .filter(exp => exp.type === 'work')
@@ -212,7 +212,7 @@ export default function Portfolio() {
               transition={{ duration: 0.3, delay: isInitialLoad ? 1.0 : 0 }}
               className="w-full space-y-6"
             >
-              <h2 className="text-2xl font-bold text-center mb-8">Education</h2>
+              <h2 className="text-xl sm:text-2xl font-bold text-center mb-6 sm:mb-8">Education</h2>
               <div className="flex flex-col items-center gap-6">
                 {allExperiences
                   .filter(exp => exp.type === 'education')
@@ -250,17 +250,17 @@ export default function Portfolio() {
               transition={{ duration: 0.3, delay: isInitialLoad ? 1.0 : 0 }}
               className="w-full space-y-6"
             >
-              <h2 className="text-2xl font-bold text-center mb-8">About Me</h2>
+              <h2 className="text-xl sm:text-2xl font-bold text-center mb-6 sm:mb-8">About Me</h2>
               <motion.p 
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.2 }}
-                className="text-slate-300 leading-relaxed"
+                className="text-sm sm:text-base text-slate-300 leading-relaxed"
               >
                 Fresh Information Technology graduate @ Temasek Polytechnic with a passion for Software Engineering and Fintech.
                 <br />
                 <br />
-                Currently building <a href="https://www.linkedin.com/feed/update/urn:li:activity:7337123878533550080/" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300">InternHunt</a>, a job aggregator for internships.
+                Currently building <a href="https://www.internhunt.sg/" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300">InternHunt</a>, a job aggregator for internships.
               </motion.p>
             </motion.section>
           )}
@@ -274,7 +274,7 @@ export default function Portfolio() {
               transition={{ duration: 0.3, delay: isInitialLoad ? 1.0 : 0 }}
               className="w-full space-y-6"
             >
-              <h2 className="text-2xl font-bold text-center mb-8">Projects</h2>
+              <h2 className="text-xl sm:text-2xl font-bold text-center mb-6 sm:mb-8">Projects</h2>
               <div className="flex flex-col items-center gap-6">
                 {projects.map((project, index) => (
                   <motion.div
