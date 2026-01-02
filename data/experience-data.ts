@@ -12,6 +12,18 @@ export interface Experience {
   
   export const workExperiences: Experience[] = [
     {
+      title: "Officer Cadet",
+      organization: "Republic of Singapore Navy",
+      organizationWebsite: "https://www.navy.gov.sg/",
+      startDate: "Dec 2025",
+      endDate: "Present",
+      description:
+        "ME4-T Naval Warfare System Engineer",
+      skills: ["Leadership", "Teamwork", "Communication", "Problem Solving", "Adaptability", "Time Management"],
+      imageUrl: "/navy.svg?height=48&width=48",
+      type: "work",
+    },
+    {
       title: "IT Intern",
       organization: "Resorts World Sentosa",
       organizationWebsite: "https://rwsentosa.com",
