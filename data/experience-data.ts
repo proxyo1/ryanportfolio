@@ -20,7 +20,7 @@ export interface Experience {
       description:
         "ME4-T Naval Warfare System Engineer",
       skills: ["Leadership", "Teamwork", "Communication", "Problem Solving", "Adaptability", "Time Management"],
-      imageUrl: "/navy.svg?height=48&width=48",
+      imageUrl: "/navy.png?height=48&width=48",
       type: "work",
     },
     {
